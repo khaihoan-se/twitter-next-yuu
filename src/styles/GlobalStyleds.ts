@@ -9,6 +9,7 @@ export const GlobalStyleds = createGlobalStyle<MyThemeType>`
    :root {
       --color-red: blue;
    }
+
    html, 
    body {
       margin: 0;
@@ -16,5 +17,9 @@ export const GlobalStyleds = createGlobalStyle<MyThemeType>`
       box-sizing: border-box;
       background: ${({ theme }) => theme.bgMain};
       color: ${({ theme }) => theme.txtColorMedium};
-   }  
+      font-family: 'Roboto', sans-serif;
+   }
+   div {
+      display: block;
+   }
 `;
