@@ -6,10 +6,11 @@ export type MyThemeType = {
 };
 
 export const GlobalStyleds = createGlobalStyle<MyThemeType>`
-   :root {
-      --color-red: blue;
+   html {
+      overflow-y: scroll;
+      overscroll-behavior-y: none;
+      font-size: 15px;
    }
-
    html, 
    body {
       margin: 0;
@@ -18,8 +19,10 @@ export const GlobalStyleds = createGlobalStyle<MyThemeType>`
       background: ${({ theme }) => theme.bgMain};
       color: ${({ theme }) => theme.txtColorMedium};
       font-family: 'Roboto', sans-serif;
+      height: 100%;
    }
-   div {
-      display: block;
+   ::-webkit-scrollbar { 
+      width: 0 !important;
+      display: none; 
    }
 `;
